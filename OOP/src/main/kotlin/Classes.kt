@@ -48,13 +48,26 @@ class User(name: String, var lastName: String, var age: Int) {
 class UserSec(name: String, var lastName: String, var age: Int) {
 
     //secondary constructors cannot declare variables only pass properties i.e you cant do var name
-    constructor(name: String) : this(name, "LastName", 0){
+    constructor(name: String) : this(name, "LastName", 0) {
         //execute some code
         println("2nd")
     }
 
-    constructor(name:String,lastname:String): this(name,lastname,0){
+    constructor(name: String, lastname: String) : this(name, lastname, 0) {
         println("3rd")
     }
 
+}
+
+//here we can also use default parameters instead of secondary constructor.
+//secondary constructor is ussefu; when you want to run some code.
+class UserDefault(var name: String = "Louis", var lastName: String = "Hugo", var age: Int = 23) {
+
+    init {
+        if (name.lowercase() == "louis") {
+            this.name = "louis"
+        } else {
+            this.name = "Louis"
+        }
+    }
 }

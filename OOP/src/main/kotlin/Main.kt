@@ -27,8 +27,9 @@ fun user() {
     val luisec = UserSec("aouis")
 
     val friend = User("Alex", "Maina", 22)
-
+    val defaultMe=UserDefault()
     println("${luisec.age},${lui.age},${luisec1.age},${friend.age}")
+    println(defaultMe.name)
 }
 
 
