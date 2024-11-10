@@ -25,16 +25,15 @@ val initialTransactions: Array<Transactions> = emptyArray<Transactions>()
 class BankAccount(
     var accountName: String,
     private var balance: Int = 0,
-    var amount: Int = 0,
-    var transactions: Array<Transactions>
+    var transactions: Array<Transactions> = emptyArray()
 ) {
-    constructor(accountName: String) : this(accountName, 0, 0, initialTransactions) {
+    constructor(accountName: String) : this(accountName, 0, initialTransactions) {
 
     }
 
     fun Depositfunds(depositAmount: Int) {
         if (depositAmount > 0) {
-            balance += depositAmount
+            this.balance += depositAmount
             println("Deposit is successful, balance now at $balance")
             return addTransactions(Transactions.DEPOSIT)
         }
@@ -44,7 +43,7 @@ class BankAccount(
 
     fun Withdrawfunds(withdrawAmount: Int) {
         if (withdrawAmount <= balance) {
-            balance -= amount
+            balance -= withdrawAmount
             println("Withdraw is successful, balance now at $balance")
             return addTransactions(Transactions.WITHDRAW)
 
@@ -57,7 +56,8 @@ class BankAccount(
     private fun addTransactions(transaction: Transactions) {
         val existingTransactions = transactions.toMutableList()
         existingTransactions.add(transaction)
-        println("Transaction added successfully, here are the transactions, $transactions")
+
+        println("$transaction done successfully")
     }
 
 }
