@@ -1,5 +1,9 @@
 fun main() {
     println("Hello World!")
+    var tesla=Car("model X","blue",1,4)
+
+
+    tesla.move()
 }
 // cant create instances with abstract classes or sealed classes -> mostly for inheritance
 
@@ -14,7 +18,7 @@ abstract class Vehicle {
 
 class Car(var name: String, var color: String, val engines: Int, val doors: Int):Vehicle() {
     override fun move() {
-        TODO("Not yet implemented")
+        println("$name is moving")
     }
 
     override fun stop() {
