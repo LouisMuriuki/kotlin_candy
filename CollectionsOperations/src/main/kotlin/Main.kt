@@ -6,7 +6,24 @@ fun main() {
     // zipTransformation()
     // unzipTransformation()
 //    associationTransformations()
-    flattenTransformations()
+//    flattenTransformations()
+    stringRepresentation()
+}
+
+fun stringRepresentation() {
+    val numberStrings = listOf<String>("one", "two", "three");
+    println(numberStrings.joinToString())
+
+    val listString=StringBuffer("The list of numbers: ")
+    println(numberStrings.joinTo(listString))
+
+    println(numberStrings.joinToString(separator = " > ", prefix = "This is ", postfix = " . ", limit = 2))
+
+    //convert a range to a list with the toList method
+    val numbers=(1..1000).toList()
+    println(numbers.joinToString(limit = 10))
+
+    println(numberStrings.joinToString { "Element: ${it.uppercase()}" })
 
 }
 
