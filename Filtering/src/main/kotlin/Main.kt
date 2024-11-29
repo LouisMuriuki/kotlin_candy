@@ -1,4 +1,8 @@
 fun main() {
+//    collectionsFiltering()
+    plusorMinus()
+}
+fun collectionsFiltering(){
     // predicates are lambda functions that can in a collections of elements and return a boolean.
     //std lib has fn that filter collections, leave the original collections unchanged.
 
@@ -21,11 +25,30 @@ fun main() {
     mixedList.filterIsInstance<Int>().forEach {
         println(it)
     }
+
     println("\n")
+
     //Partition->filters elements in a predicate but keeps the elements that don't match in a separate list
     val (match, rest) = numbers.partition { it.length > 3 }
     println(match)
     println(rest)
 
+    ///testing predicates
 
+    println(numbers.any { it.endsWith("e") })
+    println(numbers.none { it.endsWith("e") })
+    println(numbers.all { it.endsWith("u") })
+
+
+}
+
+fun plusorMinus() {
+    val numbers = mutableListOf("one", "two", "three", "four");
+    val plusNumber = numbers + "five"
+    println(plusNumber)
+
+    val minusNumber = numbers - "one"
+    println(minusNumber)
+    val minusList=numbers- mutableListOf("two", "three")
+    println(minusList)
 }
