@@ -1,9 +1,10 @@
 //lists-> ordered collections of items, not necessarirly unique.
 //Sets-> Unique unordered collection of items
-//since they are unordered you cant use the index->all other list method can be used->in,count,add,remove
-//Maps->sets of key value pais that are unique and map to only one value,
+//since they are unordered you cant use the index access modifier only indexOf()
+// ->all other list method can be used->in,count,add,remove
+//Maps->sets of key value pairs that are unique and key must map to only one value,
 //allow you to look up a value without using a numbered index.
-//keys must be unique so as to get that particular value you want
+//keys must be unique to get that particular value you want
 
 
 
@@ -40,13 +41,24 @@ fun mapExamples() {
 
 
 fun ListExample() {
-    val names = listOf<String>("Louis", "Lorna", "Kamau"); //readonly
+    val names = listOf<String>("Louis", "Lorna", "Kamau","Louis"); //readonly
+    val testList=listOf(1 to "lui",2 to "mea")
+    val testSet= setOf(1 to "lui",2 to "mea")
+    val testMap= setOf(1 to "lui",2 to "mea")
+    val testArray= arrayOf(1 to "lui",2 to "mea")
+
+    println(testList)
+    println(testSet)
+    println(testMap)
+    println(testArray.joinToString())
 
     //mutablelist accepts  duplicate items
 
-    val namesMaster = mutableListOf("Louis", "Lorna", "Kamau", "Louis"); //mutable
+    val namesMaster = mutableListOf("Louis", "Lorna", "Kamau", "Louis2"); //mutable
     //create a unmodifiable val to hold a list of mutable lists-> Known as casting
-    val nameBoss= listOf(namesMaster)
+    val nameBoss= listOf(testArray.joinToString())
+
+    println(nameBoss)
 
     //lists are ordered so to access them we use the index access operator[]
     println(namesMaster[1])
@@ -64,6 +76,8 @@ fun ListExample() {
     val nameSet = setOf("Louis", "Lorna", "Kamau", "Louis");//even though we gat 2 luis, only one is printed
     val namesmasterSet = mutableSetOf("Louis", "Lorna", "Kamau", "Louis");
     println(nameSet)
+
+    val one=namesmasterSet.indexOf("Louis")
 
 
 

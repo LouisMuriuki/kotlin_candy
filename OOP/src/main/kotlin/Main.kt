@@ -15,6 +15,17 @@ fun main() {
     car2.move()
     car2.stop()
 
+    val cow =Animal("musa","cow",)
+    val cow2 =Animal("Lion" )
+    val cow3 =Animal("Human" )
+    val cow4 =Animal("Dog","anything")
+    println("${cow.food} \n ${cow2.food} \n ${cow3.food} \n" +
+            " ${cow4.food}" )
+
+    val anim=Annimal(type = "whatever", food = "anything", name = "king")
+    println("${anim.type} \n ${anim.food} \n ${anim.name} \n" )
+    cow.makesound()
+
 
     user()
 }

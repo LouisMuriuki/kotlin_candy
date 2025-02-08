@@ -1,15 +1,18 @@
-//using primitives in an object array is not recommend as the primitives will be boxed
+//using primitives in an object array is not recommended as the primitives will be boxed
 //boxing introduces perf overhead.
 //use arrays for performance gains else use collections
 //when to use collections instead
 //->when you need readonly data.
-//whjen you are going to be addd nd removing regulartly, array are fixed in sze, create a new one each time which is inefficient.
+//when you are going to be adding and removing regularly,
+// array are fixed in size, create a new one each time which is inefficient.
 
 fun main() {
     println("Hello World!")
 
     val numbers =arrayOf<Int>(1,2,3)
+    val numberStrings =arrayOf(1 to "ha",2 to "he",3 to "hi")
     println(numbers.joinToString())
+    println(numberStrings.joinToString())
     val empty= emptyArray<Int>()
     val nulls:Array<Int?> = arrayOfNulls(3)
     ;
