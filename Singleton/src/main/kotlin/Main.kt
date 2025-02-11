@@ -1,7 +1,7 @@
-import javax.xml.crypto.Data
+// instanciated by the word object
 
 fun main() {
-    //design pattern to have only one instance of a particular object globally.
+    //singleton design pattern allows you to have only one instance of a particular object globally.
     //calling the initializer again won't result in another instance if created
     println("Hello World!")
 //    val instance =Database.getInstance()
@@ -11,8 +11,11 @@ fun main() {
 
     println(Database)
     println(Database)
+    println(Singleton)
+    println(Singleton)
 }
 //old way to do it.
+//here we have constructor keyword because we have access modifier private.
 //class Database private constructor() {
 //
 //    companion object {
@@ -32,3 +35,24 @@ object Database{
         println("Databse created")
     }
 }
+
+object Singleton{
+
+}
+
+
+class MySingleton private constructor(){
+    companion object{
+        val DBinstance:MySingleton? = null
+
+        fun getInstance():MySingleton?{
+            if (DBinstance==null){
+                return DBinstance
+            }else {
+                return null
+            }
+        }
+    }
+}
+
+

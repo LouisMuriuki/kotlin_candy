@@ -1,7 +1,12 @@
+
 fun main() {
-    for (direction in Direction.values()) {
+    for (direction in Direction.entries) {
         println(direction)
     }
+
+    val error1=ErrorResult.valueOf("SUCCESS")
+
+    println(error1)
 
     //val direction = Direction.EAST
     val direction = Direction.valueOf("EAST")
@@ -19,4 +24,9 @@ enum class Direction(var direction: String, var distance: Int) {
     SOUTH("south", 90),
     EAST("east", 80),
     WEST("west", 880)
+}
+
+enum class ErrorResult(val message:String){
+    SUCCESS("HI"),
+    ERROR("SORRY")
 }

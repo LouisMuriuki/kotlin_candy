@@ -56,7 +56,6 @@ var c=9
                 println("$i,$j")
                 break@outer //breaks outer loops breaking inner loop
             }
-
         }
 
         for (i in 1..10){

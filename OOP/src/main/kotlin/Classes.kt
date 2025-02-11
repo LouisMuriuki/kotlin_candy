@@ -12,6 +12,12 @@
 class Vehicle(name: String, var model: String, var color: String, var door: Int) {
     var name = name.trim()
 
+    init{
+        // new to me->helpful
+        require(name.isNotBlank()){"Name cannot be blank"}
+        this.name = name.trim()
+    }
+
     fun move() {
         println("The car $name is moving")
     }
@@ -28,6 +34,7 @@ class Car {
     var color = ""
     var door = 0
 
+ //init block is helpful if you want to do some processing fast before using variables
 
     fun move() {
         println("The car $name is moving")

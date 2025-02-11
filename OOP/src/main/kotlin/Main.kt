@@ -10,7 +10,7 @@ fun main() {
     car1.stop()
 
 
-    val car2 = Vehicle("Tesla", "S-Plaid", "#15060D", 2)
+    val car2 = Vehicle("", "S-Plaid", "#15060D", 2)
 
     car2.move()
     car2.stop()

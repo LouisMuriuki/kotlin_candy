@@ -1,7 +1,7 @@
 //lists-> ordered collections of items, not necessarirly unique.
 //Sets-> Unique unordered collection of items
 //since they are unordered you cant use the index access modifier only indexOf()
-// ->all other list method can be used->in,count,add,remove
+// ->all other list in-built methods can be used->in,count,add,remove
 //Maps->sets of key value pairs that are unique and key must map to only one value,
 //allow you to look up a value without using a numbered index.
 //keys must be unique to get that particular value you want
@@ -18,16 +18,17 @@ fun mapExamples() {
 //mutableMapOf<>() ->you can add or remove items to map;
     val users = mutableMapOf<Int, String>(1 to "Louis", 2 to "Hugo", 3 to "Martial")
     var names= mutableMapOf(1 to "one",2 to "two", 3 to "three")
-    // to prevent unwanted modification of your map, you can cast it.->casting(remember?, check list above)
+    // to prevent unwanted modification of your map, you can cast it.->casting(remember?, check list above)- add a list inside another unmutable list to prevent modification
 //    you can access item by using indexing
     println(names[1])
 //    you can also add items through indexing
     users[5] = "Peter"
 
-    users.remove(3)
+//    users.remove(3)
     users.forEach { (t, u) ->
         println("$t and $u")
     }
+
     // to check if a key is in the map user .containsKey()
 //    names.containsKey(2)
 

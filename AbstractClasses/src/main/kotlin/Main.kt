@@ -5,13 +5,15 @@ fun main() {
 
     tesla.move()
 }
-// cant create instances with abstract classes or sealed classes -> mostly for inheritance
+// cant create instances with abstract classes or sealed classes -> can only be inherited
 
 //define what needs to be done without stating how.- define functions without body and code
+
+//mostly used in event handling in android.
 abstract class Vehicle {
 
     val text = "Some text"
-    abstract fun move()
+    abstract fun move() //also mark fun with abstract keyword.
 
     abstract fun stop()
 }
