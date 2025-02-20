@@ -13,3 +13,22 @@ class Lateinit(name: String, firstName: String, lastName: String) {
     lateinit var favouriteMovie: String
 
 }
+
+class Person(name:String, age:Int){
+    var name=name
+        get() {
+            return "Name is $field"
+        }
+        set(value) {
+            println("That changes")
+            field=value
+        }
+
+    var age=age
+        get() {
+            return field  // this return expects a number so we can just do return The field is :$field
+        }
+        set(value) {
+            field=age
+        }
+}

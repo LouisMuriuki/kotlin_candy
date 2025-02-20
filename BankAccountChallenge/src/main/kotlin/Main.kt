@@ -27,12 +27,15 @@ class BankAccount(
     private var balance: Int = 0,
     var transactions: Array<Transactions> = emptyArray()
 ) {
-    constructor(accountName: String) : this(accountName, 0, initialTransactions) {
-
-    }
+    // this here is a secondary constructor~used when we need multiple ways to initialize an object
+    // Incase we don't need additional initialization logic, we can use default parameters instead and avoid secondary constructors
+    constructor(accountName: String) : this(accountName, 0, initialTransactions)
 
     fun Depositfunds(depositAmount: Int) {
         if (depositAmount > 0) {
+            //this keyword is optional in Kt unless necesssary i.e when we want to explicilty refer to the balance in the class not
+            //another balance varable in the project
+//            balance+=depositAmount  1 this works just fine as well
             this.balance += depositAmount
             println("Deposit is successful, balance now at $balance")
             return addTransactions(Transactions.DEPOSIT)

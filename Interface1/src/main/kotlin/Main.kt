@@ -1,7 +1,7 @@
 fun main() {
     println("Hello World!")
     //each button now has its own impl of the onpress
-
+//object expression
     //anonymous class ->object:etc (it is anonymous coz its instantiated and created at the same time)
 
     val loginButtton= Button("login",1245,object:OnPress{
