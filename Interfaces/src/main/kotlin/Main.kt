@@ -1,3 +1,6 @@
+//Interfaces~Describe a contract of what a class should do, witout saying how it should do it!.
+//A bunch of method signature that any implementing class should define
+//they enable classes to have shared behaviour even if they are unrelated
 fun main() {
     println("Hello World!")
 }

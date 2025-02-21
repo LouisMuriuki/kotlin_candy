@@ -1,3 +1,10 @@
+// during the construction of a new instance of a derived class, the base class initialization is done as the first step{base class init scope funs then the code in base class)
+// then afterwards the derived class init will run followed by the code execution in the class
+// ok this means what exactly?
+//when the base class is being constructed, the properties of the derived clas has not yet been initialized, using any of those properties in the base class initialization logic  may lead to incorrect behaviour
+// wehn designig a base class you should avoid using open members in the constructor , property initializer or init block
+
+
 open class Vehicle(val name: String, val color: String) {
 
     open fun move() {
@@ -30,6 +37,14 @@ class Plane(name: String, color: String, val engines: Int, val doors: Int) : Veh
     fun flying() {
         println("The plane is flying")
     }
+
+    inner class Apache{
+        fun flyApache(){
+            println("Apache has starte moving... standby")
+            super@Plane.move()
+
+        }
+    }
 }
 
 
@@ -60,5 +75,23 @@ class RoundButton(text: String,orientation: String,val corners:Int):Button(text,
 
     fun drawRoundButton(){
         println("drawing the round button")
+    }
+}
+
+//how to inherit from am interface and open class at the same time
+
+open class Rectangle {
+    open fun draw() { /* ... */ }
+}
+
+interface Polygon {
+    fun draw() { /* ... */ } // interface members are 'open' by default
+}
+
+class Square() : Rectangle(), Polygon {
+    // The compiler requires draw() to be overridden:
+    override fun draw() {
+        super<Rectangle>.draw() // call to Rectangle.draw()
+        super<Polygon>.draw() // call to Polygon.draw()
     }
 }
