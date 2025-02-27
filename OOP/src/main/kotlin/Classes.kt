@@ -27,14 +27,14 @@ class Vehicle(name: String, var model: String, var color: String, var door: Int)
     }
 }
 
-// classes have inside em state (variables), functionality (functions)
+// classes have inside them state (variables), functionality (functions)
 class Car {
     var name = ""
     var model = ""
     var color = ""
     var door = 0
 
- //init block is helpful if you want to do some processing fast before using variables
+ //init block is helpful if you want to do some processing first before using variables
 
     fun move() {
         println("The car $name is moving")

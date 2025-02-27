@@ -1,16 +1,20 @@
+//data class - a special class in kotlin designed to hold data, with special fn such as toString() to provide
+// readable string representations
 fun main() {
     val user1 = User("Louis", "Muriuki", 24)
     val user2 = User("Louis", "Muriuki", 24)
-//check for structural integrity
+//check for structural integrity(have the same content/values)
     println(user1 == user2)
     //check for referential  integrity ->in memeory
-    println(user1 == user2)
+    println(user1 === user2)
 
-    //== corresp
+
 
     println(user1)
 }
-
+//in a data class '==' checks for structural integrity ~ it does so by automatically implementing the equals()
+//in a normal class it will default to checking for referential integrity
+//=== still checks for referential integrity.
 //data class User(var firstName: String, var lastName: String, var age: Int)
 
 

@@ -19,6 +19,8 @@ fun getData(result: Result) {
     }
 }
 //ALTERNATIVE TO ENUM CLASS
+//sealed class are a type of class that restricts the hierarchy of subclasses,
+//useful when you want to represent a fixed type pf possible types in a type safe manner
 sealed class Result(val message: String) {
 
     fun showMessage() {
