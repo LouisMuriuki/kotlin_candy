@@ -13,6 +13,8 @@ fun main() {
     println(Database)
     println(Singleton)
     println(Singleton)
+
+    val in1=Database.g
 }
 //old way to do it.
 //here we have constructor keyword because we have access modifier private.
@@ -34,6 +36,8 @@ object Database{
     init{
         println("Databse created")
     }
+
+
 }
 
 object Singleton{
