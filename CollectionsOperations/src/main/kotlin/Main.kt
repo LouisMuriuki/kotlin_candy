@@ -2,26 +2,27 @@ fun main() {
     // collections operations in kotlin rely on lambda functions such as map to do some transformations
     // for some/every element etc
 
-    // mapTransformation()
-    // zipTransformation()
-    // unzipTransformation()
+//     mapTransformation()
+     zipTransformation()
+//     unzipTransformation()
 //    associationTransformations()
 //    flattenTransformations()
-    stringRepresentation()
+//    stringRepresentation()
 }
 
 fun stringRepresentation() {
     val numberStrings = listOf<String>("one", "two", "three");
     println(numberStrings.joinToString())
 
+    //String Buffer is like a String but mutable(modify contents without creating a new object) and is used mostly in multithreaded environments
     val listString=StringBuffer("The list of numbers: ")
     println(numberStrings.joinTo(listString))
 
-    println(numberStrings.joinToString(separator = " > ", prefix = "This is ", postfix = " . ", limit = 2))
+    println(numberStrings.joinToString(separator = " > ", prefix = "This is ", postfix = "end", limit = 2))
 
     //convert a range to a list with the toList method
     val numbers=(1..1000).toList()
-    println(numbers.joinToString(limit = 10))
+    println(numbers.joinToString(prefix = "The range is" ))
 
     println(numberStrings.joinToString { "Element: ${it.uppercase()}" })
 
@@ -38,6 +39,7 @@ fun flattenTransformations() {
     println(numbersSet)
     val numbersFlatten = numbersSet.flatten() //breaks down multidimensional array to single dimensional array
     //gets your 9
+    println(numbersFlatten)
     println(numbersFlatten[8])
 
     for (numbers in numbersFlatten) {
@@ -77,7 +79,8 @@ fun mapTransformation() {
     //return a list of non-null elements
     println(numbersMap.mapNotNull { if (it.value !== null) it else null })
 
-    // diff from mapNotNull as this does not filter out null elements
+    // diff from mapNotNull as this does not filter out null elements7
+//    ypu can have anythimg here insttead of null
     println(numbersMap.map { if (it.value !== null) it else null })
 }
 

@@ -1,6 +1,6 @@
 //lists-> ordered collections of items, not necessarirly unique.
 //Sets-> Unique unordered collection of items
-//since they are unordered you cant use the index access modifier only indexOf()
+//since they are unordered you cant use the index access modifier, only indexOf()
 // ->all other list in-built methods can be used->in,count,add,remove
 //Maps->sets of key value pairs that are unique and key must map to only one value,
 //allow you to look up a value without using a numbered index.
@@ -18,16 +18,20 @@ fun mapExamples() {
 //mutableMapOf<>() ->you can add or remove items to map;
     val users = mutableMapOf<Int, String>(1 to "Louis", 2 to "Hugo", 3 to "Martial")
     var names= mutableMapOf(1 to "one",2 to "two", 3 to "three")
-    // to prevent unwanted modification of your map, you can cast it.->casting(remember?, check list above)- add a list inside another unmutable list to prevent modification
+    // to prevent unwanted modification of your map, you can cast it.->casting(remember?, check list above)- add a list inside another immutable list to prevent modification
+
 //    you can access item by using indexing
     println(names[1])
 //    you can also add items through indexing
     users[5] = "Peter"
 
 //    users.remove(3)
-    users.forEach { (t, u) ->
-        println("$t and $u")
+    users.forEach { it ->
+        println("${it.key} and ${it.value}")
     }
+    //or
+    users.forEach { t, u ->
+        println("${t} and ${u}")
 
     // to check if a key is in the map user .containsKey()
 //    names.containsKey(2)
@@ -42,11 +46,12 @@ fun mapExamples() {
 
 
 fun ListExample() {
-    val names = listOf<String>("Louis", "Lorna", "Kamau","Louis"); //readonly
-    val testList=listOf(1 to "lui",2 to "mea")
-    val testSet= setOf(1 to "lui",2 to "mea")
-    val testMap= setOf(1 to "lui",2 to "mea")
-    val testArray= arrayOf(1 to "lui",2 to "mea")
+    val names = listOf<String>("Louis", "Lorna", "Kamau", "Louis"); //readonly
+    val testList = listOf(1 to "lui", 2 to "mea")
+    val testSet = setOf(1 to "lui", 2 to "mea")
+    val testMap = setOf(1 to "lui", 2 to "mea")
+    val testArray = arrayOf(1 to "lui", 2 to "mea")
+
 
     println(testList)
     println(testSet)
@@ -57,7 +62,7 @@ fun ListExample() {
 
     val namesMaster = mutableListOf("Louis", "Lorna", "Kamau", "Louis2"); //mutable
     //create a unmodifiable val to hold a list of mutable lists-> Known as casting
-    val nameBoss= listOf(testArray.joinToString())
+    val nameBoss = listOf(testArray.joinToString())
 
     println(nameBoss)
 
@@ -78,7 +83,7 @@ fun ListExample() {
     val namesmasterSet = mutableSetOf("Louis", "Lorna", "Kamau", "Louis");
     println(nameSet)
 
-    val one=namesmasterSet.indexOf("Louis")
+    val one = namesmasterSet.indexOf("Louis")
 
 
 
@@ -106,7 +111,7 @@ fun ListExample() {
     // with data class no duplicates
 
 //    anotherSet.forEach { println(it.name) }
-
+}
 }
 
 

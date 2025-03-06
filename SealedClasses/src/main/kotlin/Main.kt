@@ -3,8 +3,8 @@ fun main() {
     val success = Result.Success("SUCCESS")
 //    val error = Result.Error("FAILED")
     val progress= Result.Progress("PROGRESS")
-
-
+  val north=Direction.North("North")
+println(north)
     getData(progress)
 }
 
@@ -27,6 +27,7 @@ sealed class Result(val message: String) {
         println("Result: $message")
     }
 
+
     class Success(message: String) : Result(message)
 
     sealed class Error(message: String) : Result(message){
@@ -34,5 +35,14 @@ sealed class Result(val message: String) {
     class UnrecovarableErrors(exception: Exception,message:String):Error(message)
     }
     class Progress(message:String): Result(message)
+
+}
+
+sealed class Direction(val message:String){
+      fun showMessage(){
+          println("We are in the , $message")
+      }
+
+    class North(message:String):Direction(message)
 
 }

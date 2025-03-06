@@ -40,14 +40,14 @@ fun main() {
 
    Team1.addPlayer(Player2)
 
-//    covariance - allow us not to pass an exact type of a class but pass a sub-class to that type, goimg down the inheritance tree
+//    covariance - allow us not to pass an exact type of a class but pass a sub-class to that type, going down the inheritance tree
 //    you must place out keyword before the generic type
     //i.e here we expect Player but we pass BasketBall Player instead
     val footballTeam=Team<Player>(
         "Footballl Team",
         mutableListOf<BasketBallPlayer>(BasketBallPlayer("tqanaka",34),BasketBallPlayer("yoniga",23)))
 
-//    countervariance - allow us not to pass an exact sub-type of a class but pass a class to that type, goimg up the inheritance tree
+//    countervariance - allow us not to pass an exact sub-type of a class but pass a class to that type, going up the inheritance tree
 //    you must place out keyword before the generic type
 
     val counterplayer1=GamesPlayer("ppet","Conterstrike1")

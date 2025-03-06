@@ -11,16 +11,20 @@ fun main() {
 
     val numbers =arrayOf<Int>(1,2,3)
     val numberStrings =arrayOf(1 to "ha",2 to "he",3 to "hi")
-    println(numbers.joinToString())
-    println(numberStrings.joinToString())
+    val names=arrayOf(1 to "one",2 to "two")
+    val numbersNumbers:Array<Pair<Int,Int>> = arrayOf(1 to 1)
+    println(numbers.joinToString()).also { println(numbers) }
+    println(numberStrings.joinToString())  // without this wil pint out the mem address
     val empty= emptyArray<Int>()
-    val nulls:Array<Int?> = arrayOfNulls(3)
+    val nulls:Array<Int?> = arrayOfNulls(3) //prints out null, null null
     ;
-
+    val sequence= Array(5){i->i.toString()} // 0 to 4
     val squares=Array(5){i->(i*i).toString()}
     val squares1=Array(5){(it*it).toString()}
+    println(sequence.joinToString())
     println(squares.joinToString())
-
+    println(squares1.joinToString())
+    println(empty.joinToString())  // print out blank space
     println(nulls.joinToString())
 
 
@@ -53,8 +57,6 @@ fun main() {
 
 spitArrays(numbers)
     print("I ran")
-
-
     //compare arrays
     val simpleArray=arrayOf<Int>(1,2,3)
     val arary2=arrayOf<Int>(1,2,3)
@@ -71,7 +73,7 @@ spitArrays(numbers)
     println(numbers.shuffle()) //shuffles elements in array
 
     println(numbers.toList())
-    println(numbers.toSet())
+    println(numbers.toSet()).also { println(numbers.count()) }
 
 //    to map
 //only an array of Pair<KV> can be converted to a map
@@ -81,7 +83,7 @@ spitArrays(numbers)
     val data = arrayOf(1 to "Lilian",2 to "Muriuki",1 to "Michele")
 
 println(data.toMap())
-
+ // there are other type sof arrays check them out.
     var jdcvd=IntArray(3){ it+2 }
 
     println(jdcvd.joinToString())
