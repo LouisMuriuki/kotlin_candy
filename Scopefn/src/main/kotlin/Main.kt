@@ -1,3 +1,4 @@
+//let run with apply also
 fun main() {
     val user=User()
 //scope are fn that can be called on almost an object

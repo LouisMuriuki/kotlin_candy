@@ -9,9 +9,10 @@ fun main() {
       add(5,10) { smallLambda } // you can also move the lambda from the parenthesis and wrap it in a bracket if it'0-67as the last parameter
 
 upperCase("text"){it.uppercase()}
+    laugh("Haha"){it.uppercase()}
 }
 
-
+ var lambda={a:Int,b:Int->(a+b)}
 
 
 
@@ -23,3 +24,15 @@ fun upperCase(text:String,uppercaselambda:(String)->String){
 fun add(a:Int,b:Int,action:(Int)->Unit){
     action(a+b)
 }
+
+
+
+
+fun laugh(laughter:String,laughing:(String)->String){
+
+    var laugh= laughing(laughter)
+
+    println(laugh)
+
+}
+
