@@ -4,8 +4,9 @@ fun main() {
 
 
     tesla.move()
+    tesla.text
 }
-// cant create instances with abstract classes or sealed classes -> can only be inherited
+// cant create instances with abstract classes -> can only be inherited
 
 //define what needs to be done without stating how.- define functions without body and code
 

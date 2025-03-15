@@ -1,7 +1,7 @@
-//let run with apply also
+// let run with apply also
 fun main() {
     val user=User()
-//scope are fn that can be called on almost an object
+// scope are fn that can be called on almost an object
 //    execute a block of code on an object
     //context object can be reffered to using it or this keyword
 //    return value can be context object or lambda result
@@ -12,9 +12,9 @@ fun main() {
     val result =  with(user){
         this.lastName="" // can also use this keyword, but for conciseness not a must
         firstName="louis"
-        this //last line of code is the type of the return value(this-> current object)... change to int, Char to see
+//        this //last line of code is the type of the return value(this-> current object)... change to int, Char to see
     }
-    //apply scope fn, reurn value is the object
+    //apply scope fn, return value is the object
     user.apply { this.firstName="Alex"}
 
 
@@ -26,7 +26,7 @@ fun main() {
 
 
 
-    //let scope function, return value id the lambda result
+    //let scope function, return value is the lambda result
     var text: String?=null
     //execute code only if not null
     text?.let {

@@ -14,7 +14,7 @@ fun main() {
     println(Singleton)
     println(Singleton)
 
-    val in1=Database.g
+
 }
 //old way to do it.
 //here we have constructor keyword because we have access modifier private.

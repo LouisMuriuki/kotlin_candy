@@ -4,6 +4,7 @@ fun main() {
     var myLambda={a:Int,b:Int -> println("A+b=${a+b}")}
     var smallLambda={a:Int -> println("A=${a}")}
     var myLambda2:(Int,Int)-> Unit ={a,b -> println("A+b=${a+b}")}
+    var mylambaTest:(Int,Int)->Unit= {a,b -> println(a+b)}
     println("Hello World!")
       add(5,10,smallLambda)
       add(5,10) { smallLambda } // you can also move the lambda from the parenthesis and wrap it in a bracket if it'0-67as the last parameter

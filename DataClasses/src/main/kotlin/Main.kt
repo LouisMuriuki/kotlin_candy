@@ -4,9 +4,9 @@ fun main() {
     val user1 = User("Louis", "Muriuki", 24)
     val user2 = User("Louis", "Muriuki", 24)
 //check for structural integrity(have the same content/values)
-    println(user1 == user2)
+    println(user1 == user2) // structural
     //check for referential  integrity ->in memeory
-    println(user1 === user2)
+    println(user1 === user2) //referential
 
 
 

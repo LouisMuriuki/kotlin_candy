@@ -7,10 +7,23 @@ class User(firstName: String, var lastName: String = "Hugo", var age: Int = 25) 
             println("$value was assigned to firstName property")
             field = value
         }
+    var lastname="Louis"
+        get() {
+            return "FirstName: $field"
+        }
+        set(value) {
+            println("$value was assigned to firstName property")
+            field = value
+        }
 }
 
 class Lateinit(name: String, firstName: String, lastName: String) {
     lateinit var favouriteMovie: String
+// not allowed as lateinit does not have a backing field~field
+
+        set(value) {
+            field="Avengers"
+        }
 
 }
 

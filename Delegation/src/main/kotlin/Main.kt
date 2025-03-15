@@ -53,5 +53,42 @@ open class secondDelegate:B{
     override fun printB() {
 
     }
+
+    interface testing{
+        fun printTest(){
+            println("Testing")
+        }
+    }
+
+    interface releasing{
+        fun printRelease(){
+            println("Deploying")
+        }
+    }
+
+    open class Tester():testing{
+        override fun printTest() {
+            super.printTest()
+        }
+    }
+
+    open class DevOps:releasing{
+        override fun printRelease() {
+            super.printRelease()
+        }
+    }
+
+    class Agile():testing by Tester(),releasing by DevOps(){
+
+        override fun printRelease() {
+            super.printRelease()
+        }
+
+        override fun printTest() {
+            super.printTest()
+        }
+
+    }
+
 }
 

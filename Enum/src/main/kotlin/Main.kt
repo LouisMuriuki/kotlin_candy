@@ -17,6 +17,8 @@ fun main() {
         Direction.NORTH -> println("The direction is north")
         Direction.SOUTH -> println("The direction is south")
     }
+
+    val earth=Universe.Earth
 }
 
 enum class Direction(var direction: String, var distance: Int) {
@@ -29,4 +31,17 @@ enum class Direction(var direction: String, var distance: Int) {
 enum class ErrorResult(val message:String){
     SUCCESS("HI"),
     ERROR("SORRY")
+}
+
+enum class Universe(){
+    Earth,
+    Sun,
+    Moon
+
+}
+
+
+sealed class BigUniverse(){
+    class Earth:BigUniverse()
+    class Sun:BigUniverse()
 }

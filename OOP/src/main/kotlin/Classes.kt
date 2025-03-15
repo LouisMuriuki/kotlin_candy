@@ -65,9 +65,9 @@ class User(name: String, var lastName: String, var age: Int) {
 // secondary constructor
 class UserSec(name: String, var lastName: String, var age: Int) {
 
-    //secondary constructors cannot declare variables only pass properties i.e you cant do var name
+    //secondary constructors cannot declare variables only pass parameters i.e you cant do var name
     //this calls primary constructor to initialize the object
-//    secondary constructor takes in parameters abd calls the primary cnstructor
+//    secondary constructor takes in parameters abd calls the primary constructor
     constructor(name: String) : this(name, "LastName", 0) {
         //execute some code
         println("2nd")
@@ -99,6 +99,8 @@ class Animal(name:String, var type:String, food:String) {
     constructor(name:String,type: String):this(name,type,"grass")
 
     constructor(type: String):this("Michael",type,"Meat")
+
+    constructor(food:String):this("Louis","Cow",food)
 
 
     init {
