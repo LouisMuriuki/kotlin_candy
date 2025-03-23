@@ -4,7 +4,7 @@
 fun main() {
     println("Hello World!")
 }
-// comonly used behaviour shared among diff classes, you dont want to provide the actual code that goes into those
+// describe commonly used behaviour shared among diff classes, you don't want to provide the actual code that goes into those
 // classes to implement the interface.
 
 

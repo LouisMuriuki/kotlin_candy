@@ -91,16 +91,17 @@ class UserDefault(var name: String = "Louis", var lastName: String = "Hugo", var
         } else {
             this.name = "Louis"
         }
-    }}
-class Animal(name:String, var type:String, food:String) {
+    }
+}
+
+
+class Animal (name:String, var type:String, food:String) {
     var name: String
     var food: String
 
     constructor(name:String,type: String):this(name,type,"grass")
 
     constructor(type: String):this("Michael",type,"Meat")
-
-    constructor(food:String):this("Louis","Cow",food)
 
 
     init {

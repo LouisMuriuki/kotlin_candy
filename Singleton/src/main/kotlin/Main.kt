@@ -1,9 +1,9 @@
-// instanciated by the word object
+// instantiated by the word object
 
 fun main() {
     //singleton design pattern allows you to have only one instance of a particular object globally.
     //calling the initializer again won't result in another instance if created
-    println("Hello World!")
+
 //    val instance =Database.getInstance()
 //    val instance2 =Database.getInstance()
 
@@ -34,14 +34,17 @@ fun main() {
 // new way to do it
 object Database{
     init{
-        println("Databse created")
+        println("Database created")
     }
+
+    //object automatically creates a singleton with one instance.
 
 
 }
 
 object Singleton{
-
+// you cannot have companion object inside here X
+// why? not allowed, object is already a singleton.
 }
 
 
