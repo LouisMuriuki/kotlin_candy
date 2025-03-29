@@ -10,8 +10,8 @@
 
 
 fun main() {
-    ListExample();
-//    mapExamples();
+//    ListExample();
+    mapExamples();
 }
 
 fun mapExamples() {
@@ -30,8 +30,8 @@ fun mapExamples() {
         println("${it.key} and ${it.value}")
     }
     //or
-    users.forEach { t, u ->
-        println("${t} and ${u}")
+    users.forEach { (t, u) ->
+        println("$t and $u")
 
     // to check if a key is in the map user .containsKey()
 //    names.containsKey(2)

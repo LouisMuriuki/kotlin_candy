@@ -1,6 +1,6 @@
 package com.example.classes
 
-internal class Person()
+internal class Person()  // Accessible within the same module(files compiled together)
 private class Human()   // class accessible within the file only.
 open class User()   // class accessible within the file only.
 {

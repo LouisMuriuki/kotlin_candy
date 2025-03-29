@@ -1,7 +1,7 @@
 fun main() {
     println("Hello World!")
     //each button now has its own impl of the onpress
-//object expression
+//object expression- objects without explicit class defination
     //anonymous class ->object:etc (it is anonymous coz its instantiated and created at the same time)
 
     val loginButtton= Button("login",1245,object:OnPress{
@@ -17,6 +17,13 @@ fun main() {
         }
 
     })
+    val cancelButtton=Button("Cancel",10, object:OnPress{
+        override fun handleClick() {
+            TODO("Not yet implemented")
+        }
+    })
+
+    
 }
 
 class Button(var text:String, var id:Int,OnPress:OnPress){

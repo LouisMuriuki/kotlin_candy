@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64250b0f-7ffc-4573-8b54-cf153da8ba8b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../AbstractClasses/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../AbstractClasses/src/main/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Collections/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Collections/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataClasses/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../DataClasses/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Delegation/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Delegation/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Enum/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Enum/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/src/main/kotlin/Classes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/src/main/kotlin/Classes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Singleton/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Singleton/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Collections/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Collections/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,15 +24,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Kotlin.MainKt.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/lui/Desktop/Develop/kotlin_candy/SealedClasses"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lui/Desktop/Develop/kotlin_candy/SealedClasses&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
